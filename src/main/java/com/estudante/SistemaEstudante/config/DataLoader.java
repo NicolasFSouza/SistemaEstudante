@@ -14,9 +14,9 @@ public class DataLoader implements CommandLineRunner{
     @Override
     public void run(String ... args){
         if (courseRepository.count() == 0){
-            courseRepository.save(new CourseModel(1L, "engenharia de sofware"));
-            courseRepository.save(new CourseModel(2L, "ADS"));
-            courseRepository.save(new CourseModel(3L, "CeT"));
+            courseRepository.save(new CourseModel(null, "engenharia de sofware"));
+            courseRepository.save(new CourseModel(null, "ADS"));
+            courseRepository.save(new CourseModel(null, "CeT"));
         }
     }
 }
