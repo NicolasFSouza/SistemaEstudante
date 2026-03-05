@@ -14,6 +14,9 @@ public class CourseModel {
     private Long id;
 
     @Column(nullable = false, length = 100)
-    String name;
+    private String name;
+
+    @Column(nullable = false, unique = true, length = 10)
+    private String registry;
 
 }
