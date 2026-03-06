@@ -11,12 +11,17 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/teste")
+@RequestMapping
 public class CourseController {
     private final CourseService courseService;
 
     @GetMapping
     public List<CourseModel> listAll(){
         return courseService.getAll();
+    }
+
+    @GetMapping("/getById/{id}")
+    public CourseModel searchById(@PathVariable Long id){
+        return courseService.getById(id);
     }
 }
